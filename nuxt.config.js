@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'waltid-issuer-portal',
+    title: 'Tampere University Student management system',
     htmlAttrs: {
       lang: 'en'
     },
@@ -56,12 +56,12 @@ export default {
   },
 
   proxy: {
-    '/issuer-api/': 'https://wallet.waltid.org',
-    '/onboarding-api/': 'https://wallet.waltid.org',
-    '/api/': 'https://wallet.waltid.org'
-    //'/issuer-api/': 'http://localhost:8080/',
-    //'/onboarding-api/': 'http://localhost:8080/',
-    //'/api/': 'http://localhost:8080/'
+    //'/issuer-api/': 'https://wallet.waltid.org',
+    //'/onboarding-api/': 'https://wallet.waltid.org',
+    //'/api/': 'https://wallet.waltid.org'
+    '/issuer-api/': 'http://localhost:8080/',
+    '/onboarding-api/': 'http://localhost:8080/',
+    '/api/': 'http://localhost:8080/'
   },
 
   auth: {
@@ -124,7 +124,7 @@ export default {
   },
 
   publicRuntimeConfig: {
-    copyright: process.env.COPYRIGHT || 'powered by walt.id',
+    copyright: process.env.COPYRIGHT || '',
     salt: process.env.SALT
   },
 
