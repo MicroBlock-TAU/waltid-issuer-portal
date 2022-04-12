@@ -1,41 +1,16 @@
 <template>
   <div>
     <header>
-      <!--<div id="navbarHeader" class="collapse bg-dark">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">
-                About walt.id
-              </h4>
-              <p class="text-muted">
-                <b>walt.id</b> is a European company that develops Self-
-                Sovereign Identity (SSI) solutions for governments and
-                businesses across industries.
-                We offer an easy and fast way to adopt SSI - particularly
-                Europe’s new decentralized digital identity ecosystem -
-                based on robust open source products. To ensure client’s
-                success our industry-leading experts provide holistic
-                services ranging from conception and project planning
-                over the implementation of proof-of-concepts and
-                production system to enterprise support and managed
-                cloud services..
-              </p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">
-                Coordinates
-              </h4>
-              <ul class="list-unstyled">
-                <li><a href="https://walt.id" class="text-white">web: https://walt.id</a></li>
-                <li><a href="https://docs.walt.id" class="text-white">docs: https://docs.walt.id</a></li>
-                <li><a href="https://github.com/walt-id" class="text-white">src: https://github.com/walt-id</a></li>
-                <li><a href="mailto:office@walt.id" class="text-white">mail: office@walt.id</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>-->
+      <div id="navbarHeader" class="collapse bg-dark">
+        <ul>
+          <li>
+            <NuxtLink to="/">Issue</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/verify">Verify</NuxtLink>
+          </li>
+        </ul>
+      </div>
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container">
           <a href="#" class="navbar-brand d-flex align-items-center">
@@ -49,16 +24,13 @@
             <!--<img class="me-3" src="/waltid-white-logo.png" alt="" width="50px">-->
             <strong>Student management system</strong>
           </a>
-          <!--<ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#" v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="$i18n.setLocale(locale.code)">
-                <img :src="locale.flag" width="20px" height="15px" :alt="locale.iso" class="me-2 border border-white" />
-              </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" />
               </button>
             </li>
-          </ul>-->
+          </ul>
         </div>
       </div>
     </header>
