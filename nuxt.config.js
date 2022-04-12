@@ -61,7 +61,8 @@ export default {
     //'/api/': 'https://wallet.waltid.org'
     '/issuer-api/': 'http://localhost:8080/',
     '/onboarding-api/': 'http://localhost:8080/',
-    '/api/': 'http://localhost:8080/'
+    '/api/': 'http://localhost:8080/',
+    '/verifier-api/': 'http://localhost:8080/'
   },
 
   auth: {
