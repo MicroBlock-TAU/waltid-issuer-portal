@@ -1,9 +1,10 @@
 <template>
+<div>
+    <NavBar />
     <main class="_home d-flex justify-content-centr align-items-center">
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <img src="/favicon.png"/>
             <h2 class="fw-normal">
               Welcome to the
             </h2>
@@ -24,10 +25,13 @@
         </div>
       </section>
     </main>
+  </div>
 </template>
 
 <script>
+import NavBar from '../components/NavBar.vue'
 export default {
+  components: { NavBar },
   data () {
     return {
       vidSchemaUri: 'https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/0xb77f8516a965631b4f197ad54c65a9e2f9936ebfb76bae4906d33744dbcc60ba',
