@@ -5,21 +5,17 @@
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
             <h2 class="fw-normal">
-              Welcome to the
-            </h2>
-            <h2 class="fw-bold">
-              Demo Verifier Portal
+              Register external learning achievements
             </h2>
             <p class="lead text-muted">
-              Connect your wallet and share<br>your credentials to access services.
+              You can register learning achievments by presenting digital credentials.
             </p>
             <p>
-              <a :href="'/verifier-api/present/?walletId=' + wallets[0].id + '&schemaUri=' + vidSchemaUri" class="btn btn-primary my-2 fw-bold _btn">Connect Wallet using <b>Verifiable ID</b></a>
+              <!--<a :href="'/verifier-api/present/?walletId=' + wallets[0].id + '&schemaUri=' + vidSchemaUri" class="btn btn-primary my-2 fw-bold _btn">Connect Wallet using <b>Verifiable ID</b></a>-->
               <a :href="'/verifier-api/present/?walletId=' + wallets[0].id +
               '&schemaUri=' + europassSchemaUri" class="btn btn-success my-2
-              fw-bold _btn">Connect Wallet using <b>europass credential</b></a>
+              fw-bold _btn">Present <b>europass credential</b></a>
             </p>
-            <p class="text-muted fw-bold">© 2022 walt.id</p>
           </div>
         </div>
       </section>

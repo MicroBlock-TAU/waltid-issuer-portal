@@ -4,12 +4,9 @@
         <div class="row py-lg-5">
           <div class="col-lg-4 col-md-6 mx-auto">
             <h2 class="fw-normal">
-              Thanks, you just
+              Register external learning achievements
             </h2>
-            <h2 class="fw-bold mb-2">
-              presented credentials.
-            </h2>
-            <div class="accordion my-2" id="accordion1" v-for="data in result.vp_token.verifiableCredential" v-bind:key="data.id">
+            <!--<div class="accordion my-2" id="accordion1" v-for="data in result.vp_token.verifiableCredential" v-bind:key="data.id">
               <div class="accordion-item">
                 <h2 class="accordion-header" :id="'heading'+result.vp_token.verifiableCredential.indexOf(data)">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse'+result.vp_token.verifiableCredential.indexOf(data)" aria-expanded="false" :aria-controls="'collapse'+result.vp_token.verifiableCredential.indexOf(data)">
@@ -19,7 +16,6 @@
                 </h2>
                 <div :id="'collapse'+result.vp_token.verifiableCredential.indexOf(data)" class="accordion-collapse collapse" :aria-labelledby="'heading'+result.vp_token.verifiableCredential.indexOf(data)" data-bs-parent="#accordionExample">
                   <div class="accordion-body text-start">
-                    <!-- VerifiableId -->
                     <div v-if="data.type[data.type.length-1] == 'VerifiableId'">
                       <span>
                         <i class="bi bi-check"></i>
@@ -62,7 +58,6 @@
                       </span>
                     </div>
 
-                    <!-- EuropeanBankIdentity -->
                     <div v-if="data.type[data.type.length-1] == 'EuropeanBankIdentity'">
                       <span>
                         <i class="bi bi-check"></i>
@@ -98,16 +93,22 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div>-->
             <div v-if="result.verification_result.valid" class="alert alert-success mt-4" role="alert">
-              <strong>The verification was successful</strong>
+              <strong>Learning achievements registered successfully.</strong>
               <br>
               Verification Policies
               <br>
-              {{JSON.stringify(result.verification_result.policyResults, undefined, 2)}}
+              {{JSON.stringify(result.verification_result.policyResults,
+              undefined, 2)}}<br>
+              The following achievements were registered:
+              <ul v-for="data in result.vp_token.verifiableCredential" v-bind:key="data.id">
+                <li>{{ data.credentialSubject.achieved[0].title}}</li>
+              </ul>
             </div>
             <div v-else class="alert alert-danger mt-4" role="alert">
-              <strong>The verification failed</strong>
+              <strong>Registration of external learning achievements was not
+              successful. The verification of your credentials failed</strong>
               <br>
               Verification Policies
               <br>
@@ -141,7 +142,6 @@
                 <a href="#" class="text-dark" @click="viewSessionToken">No session token</a>
               </span>
             </div>
-            <p class="text-muted fw-bold mt-5">© 2022 walt.id</p>
           </div>
         </div>
       </section>
