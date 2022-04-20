@@ -102,8 +102,8 @@
               {{JSON.stringify(result.verification_result.policyResults,
               undefined, 2)}}<br>
               The following achievements were registered:
-              <ul v-for="data in result.vp_token.verifiableCredential" v-bind:key="data.id">
-                <li>{{ data.credentialSubject.achieved[0].title}}</li>
+              <ul>
+                <li v-for="data in result.vp_token.verifiableCredential" v-bind:key="data.id">{{ data.credentialSubject.achieved[0].title}}</li>
               </ul>
             </div>
             <div v-else class="alert alert-danger mt-4" role="alert">
