@@ -95,26 +95,22 @@
               </div>
             </div>-->
             <div v-if="result.verification_result.valid" class="alert alert-success mt-4" role="alert">
-              <strong>Learning achievements registered successfully.</strong>
-              <br>
-              Verification Policies
-              <br>
-              {{JSON.stringify(result.verification_result.policyResults,
-              undefined, 2)}}<br>
+              <strong>Learning achievements registered successfully.</strong><br>
+              
               The following achievements were registered:
               <ul>
                 <li v-for="data in result.vp_token.verifiableCredential" v-bind:key="data.id">{{ data.credentialSubject.achieved[0].title}}</li>
               </ul>
+              Presentation verification details:
+              <verification-results :results="result.verification_result.policyResults" />
             </div>
             <div v-else class="alert alert-danger mt-4" role="alert">
               <strong>Registration of external learning achievements was not
               successful. The verification of your credentials failed</strong>
               <br>
-              Verification Policies
-              <br>
-              {{JSON.stringify(result.verification_result.policyResults, undefined, 2)}}
+              <verification-results :results="result.verification_result.policyResults" />
             </div>
-            <div v-if="result.verification_result.valid" class="alert alert-secondary mt-4" role="alert">
+            <!--<div v-if="result.verification_result.valid" class="alert alert-secondary mt-4" role="alert">
               Authenticated session established
               <br>
               <span>
@@ -141,7 +137,7 @@
                 <i class="bi bi-dot"></i>
                 <a href="#" class="text-dark" @click="viewSessionToken">No session token</a>
               </span>
-            </div>
+            </div>-->
           </div>
         </div>
       </section>
@@ -150,11 +146,13 @@
 
 
 <script>
+import VerificationResults from '../components/VerificationResults.vue'
 if (window.opener != null) {
   window.opener.location = window.location
   window.close()
 }
 export default {
+  components: { VerificationResults },
   name: 'success.vue',
   data (){
     return{
