@@ -79,7 +79,7 @@ export default {
         const loginResponse = await this.$auth.loginWith("local", {
           data: {
             id: this.email,
-            password: await this.hashWithSalt(this.password)
+            password: this.password
           }
         })
         this.$auth.setUser(loginResponse.data)
