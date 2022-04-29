@@ -8,7 +8,7 @@
               Register external learning achievements
             </h2>
             <p class="lead text-muted">
-              You can register learning achievments by presenting digital credentials.
+              You can register learning achievements by presenting digital credentials.
             </p>
             <p>
               <!--<a :href="'/verifier-api/present/?walletId=' + wallets[0].id + '&schemaUri=' + vidSchemaUri" class="btn btn-primary my-2 fw-bold _btn">Connect Wallet using <b>Verifiable ID</b></a>-->
