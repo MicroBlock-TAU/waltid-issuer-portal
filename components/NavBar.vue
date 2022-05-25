@@ -3,10 +3,10 @@
       <div id="navbarHeader" class="collapse bg-dark">
         <ul>
           <li>
-            <NuxtLink to="/">Issue</NuxtLink>
+            <NuxtLink to="/">Get credentials</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/verify">Verify</NuxtLink>
+            <NuxtLink to="/verify">Register learning achievements</NuxtLink>
           </li>
         </ul>
       </div>
@@ -42,5 +42,7 @@ export default {
 </script>
 
 <style scoped>
-
+#navbarHeader {
+  font-size: 15pt;
+}
 </style>
